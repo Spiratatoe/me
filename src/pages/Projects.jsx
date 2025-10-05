@@ -1,8 +1,11 @@
 import './Pages.css';
+import PillNav from '../components/PillNav';
 
 function Projects() {
   return (
-    <div className="page-content">
+    <>
+      <PillNav />
+      <div className="page-content">
       <div className="page-container">
         <h1 className="page-title">Projects</h1>
         <div className="page-body">
@@ -24,6 +27,7 @@ function Projects() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

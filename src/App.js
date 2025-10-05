@@ -6,10 +6,17 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import ThemeCarousel from './components/ThemeCarousel';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 function AppContent() {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { setTheme } = useTheme();
+
+  const handleThemeChange = (newTheme) => {
+    setTheme(newTheme);
+  };
 
   return (
     <div className="App">
@@ -44,24 +51,30 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      {/* Right side - Navigation */}
-      <nav className="right-nav">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
+      {/* Right side - Navigation - Only show on home */}
+      {isHome && (
+        <nav className="right-nav">
+          <ul>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+      )}
+
+      {/* Theme Carousel */}
+      <ThemeCarousel onThemeChange={handleThemeChange} />
     </div>
   );
 }
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

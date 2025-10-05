@@ -1,8 +1,11 @@
 import './Pages.css';
+import PillNav from '../components/PillNav';
 
 function Contact() {
   return (
-    <div className="page-content">
+    <>
+      <PillNav />
+      <div className="page-content">
       <div className="page-container">
         <h1 className="page-title">Contact</h1>
         <div className="page-body">
@@ -15,6 +18,7 @@ function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
