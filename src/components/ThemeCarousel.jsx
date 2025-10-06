@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './ThemeCarousel.css';
 
+
 const themes = [
   {
     name: 'Default',
-    colors: ['#0736ff', '#000000', '#ffffff', '#40ffaa', '#4079ff'],
+    colors: ['#0736ff', '#000000', '#43484B', '#E5E4B7', '#84b0c1'],
     splineScene: 'https://prod.spline.design/lwJZVVCK6o807FRr/scene.splinecode'
   },
   {
@@ -14,7 +15,7 @@ const themes = [
   },
   {
     name: 'Ocean',
-    colors: ['#06d6a0', '#118ab2', '#073b4c', '#ef476f', '#ffd166'],
+    colors: ['#06d6a0', '#003527', '#ff5804', '#cef17b', '#eceabe'],
     splineScene: 'https://prod.spline.design/d0RGQyc-gWntt7li/scene.splinecode'
   },
   {

@@ -4,6 +4,7 @@
   font-size: 4rem;
   font-weight: bold;
   line-height: 1;
+  color: var(--background-color);
 }
 
 .split-letter {

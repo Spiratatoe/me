@@ -1,8 +1,11 @@
 import './Pages.css';
 import './About.css';
 import PillNav from '../components/PillNav';
+import { useTheme } from '../context/ThemeContext';
 
 function About() {
+  const { theme } = useTheme();
+
   return (
     <>
       <PillNav />
@@ -45,26 +48,35 @@ function About() {
         <div className="about-card skills-card">
           <h2 className="card-title">Skills</h2>
           <div className="card-content">
-            <div className="skills-category">
-              <h3>Technical Skills</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">Python</span>
-                <span className="skill-tag">CSS/HTML</span>
+            {[
+              { title: 'Game Development', skills: ['Unity', 'Unreal Engine', 'Spline'], colorIndex: 0 },
+              { title: 'Frontend Development', skills: ['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React'], colorIndex: 1 },
+              { title: 'Backend & APIs', skills: ['Python', 'Flask', 'Java', 'Node.js', 'Nuclio', 'Func Apps', 'Postman'], colorIndex: 2 },
+              { title: 'AI / Machine Learning', skills: ['YOLO', 'Python', 'Claude Code'], colorIndex: 3 },
+              { title: 'Databases', skills: ['SQL', 'PostgreSQL', 'Neo4j', 'Snowflake'], colorIndex: 4 },
+              { title: 'Cloud & DevOps', skills: ['Azure', 'Azure DevOps', 'Docker'], colorIndex: 0 },
+              { title: 'Collaboration & Project Management', skills: ['Jira', 'GitHub'], colorIndex: 1 },
+              { title: 'Languages', skills: ['English', 'French'], colorIndex: 2, soft: true }
+            ].map((category, idx) => (
+              <div key={idx} className="skills-category">
+                <h3>{category.title}</h3>
+                <div className="skill-tags">
+                  {category.skills.map((skill, skillIdx) => (
+                    <span
+                      key={skillIdx}
+                      className={`skill-tag ${category.soft ? 'soft' : ''}`}
+                      style={{
+                        backgroundColor: category.soft ? 'white' : theme.colors[category.colorIndex],
+                        color: category.soft ? theme.colors[category.colorIndex] : 'white',
+                        borderColor: category.soft ? theme.colors[category.colorIndex] : 'transparent'
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className="skills-category">
-              <h3>Soft Skills</h3>
-              <div className="skill-tags">
-                <span className="skill-tag soft">#Creativity</span>
-                <span className="skill-tag soft">#Teamwork</span>
-                <span className="skill-tag soft">#Communication</span>
-                <span className="skill-tag soft">#Problem_Solving</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
