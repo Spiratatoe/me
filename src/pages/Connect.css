@@ -1,0 +1,183 @@
+.connect-header {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.connect-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+.connect-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.image-frame {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image-frame::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 0;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border: 8px solid #000;
+}
+
+.connect-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.connect-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border: 3px solid #000;
+  background: white;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.connect-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.connect-link.linkedin:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.connect-link.email:hover {
+  background: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.connect-link.github:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.connect-link svg {
+  flex-shrink: 0;
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .connect-header .split-text {
+    font-size: 3rem;
+  }
+
+  .connect-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .image-frame {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-frame::before {
+    top: 10px;
+    left: 10px;
+  }
+
+  .image-frame img {
+    border-width: 6px;
+  }
+
+  .connect-links {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .connect-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .connect-link svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-header .split-text {
+    font-size: 2rem;
+  }
+
+  .connect-header {
+    top: 80px;
+  }
+
+  .connect-container {
+    padding-top: 160px;
+  }
+
+  .image-frame {
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-frame::before {
+    top: 8px;
+    left: 8px;
+  }
+
+  .image-frame img {
+    border-width: 4px;
+  }
+
+  .connect-links {
+    gap: 1rem;
+  }
+}

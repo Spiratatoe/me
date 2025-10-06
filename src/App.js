@@ -5,7 +5,7 @@ import Particles from './components/Particles';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import Connect from './pages/Contact';
 import ThemeCarousel from './components/ThemeCarousel';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
@@ -48,7 +48,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/connect" element={<Connect />} />
       </Routes>
 
       {/* Right side - Navigation - Only show on home */}
@@ -57,7 +57,7 @@ function AppContent() {
           <ul>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/connect">Connect</Link></li>
           </ul>
         </nav>
       )}

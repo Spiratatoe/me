@@ -1,0 +1,11 @@
+.split-text {
+  display: flex;
+  overflow: hidden;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.split-letter {
+  display: inline-block;
+}
