@@ -1,10 +1,19 @@
 # Portfolio Website - Me
 
+
+
+
 Finally made my personal portfolio! The theme I wanted to go with was a 3D asset in the middle taking focus, and since my 3D skills might not be the best, we ended up with a giant smiley face.
 
 A large bulk of this code was written using Claude Code, as I wanted to see how fast I could mix my own skills, my fast-turning ideas, and the convenience of AI. Let me say I was impressed—having fun and enjoying the whole process.
 
 Looking forward to the next iteration of this when Mr. Smiley gets older and I can try out some new front-end design!
+
+## See It Here
+
+The site is hosted on Vercel: [https://jackspiratos.vercel.app](https://jackspiratos.vercel.app)
+
+<img width="1207" height="762" alt="Screenshot 2025-10-06 at 12 30 38 AM" src="https://github.com/user-attachments/assets/0d0450a5-b61d-4e23-87ce-fe3c97cdc20b" />
 
 ## Tinkered With
 
@@ -15,9 +24,6 @@ Looking forward to the next iteration of this when Mr. Smiley gets older and I c
 - Vercel
 - ReactBits
 
-## See It Here
-
-The site is hosted on Vercel: [https://jackspiratos.vercel.app](https://jackspiratos.vercel.app)
 
 ## Built With
 
