@@ -13,7 +13,8 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState({
     name: 'Default',
-    colors: ['#0736ff', '#000000', '#ffffff', '#40ffaa', '#4079ff']
+    colors: ['#0736ff', '#000000', '#ffffff', '#40ffaa', '#4079ff'],
+    splineScene: 'https://prod.spline.design/lwJZVVCK6o807FRr/scene.splinecode'
   });
 
   useEffect(() => {

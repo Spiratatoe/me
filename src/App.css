@@ -15,6 +15,20 @@
   transition: background-color 0.6s ease;
 }
 
+.App.scrollable {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.App.scrollable::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
 /* Fade in animation */
 @keyframes fadeIn {
   from {

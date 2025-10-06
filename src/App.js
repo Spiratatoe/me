@@ -12,19 +12,19 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 function AppContent() {
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
   };
 
   return (
-    <div className="App">
+    <div className={`App ${!isHome ? 'scrollable' : ''}`}>
       {/* Particles background - only on home */}
       {isHome && (
         <div className="particles-background fade-in">
           <Particles
-            particleColors={['#28dfefff', '#3764edff']}
+            particleColors={theme.colors}
             particleCount={1000}
             particleSpread={10}
             speed={0.1}
@@ -39,7 +39,7 @@ function AppContent() {
       {/* Spline background - only on home */}
       {isHome && (
         <div className="spline-container fade-in">
-          <Spline scene="https://prod.spline.design/lwJZVVCK6o807FRr/scene.splinecode" />
+          <Spline scene={theme.splineScene} />
         </div>
       )}
 
