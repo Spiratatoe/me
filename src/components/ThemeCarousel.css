@@ -56,6 +56,13 @@
   border-radius: 50%;
 }
 
+.theme-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .theme-carousel {

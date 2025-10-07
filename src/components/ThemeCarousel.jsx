@@ -22,6 +22,12 @@ const themes = [
     name: 'Purple',
     colors: ['#7209b7', '#560bad', '#3a0ca3', '#f72585', '#4cc9f0'],
     splineScene: 'https://prod.spline.design/el1qrgRs9m15U78x/scene.splinecode'
+  },
+  {
+    name: 'Kirby',
+    colors: ['#ffb3d9', '#87ceeb', '#ff69b4', '#ffc0cb', '#ffe4e1'],
+    splineScene: 'https://prod.spline.design/T4wHMb1VhCwfyWJP/scene.splinecode',
+    icon: '/kirby_icon.png'
   }
 ];
 
@@ -45,15 +51,23 @@ function ThemeCarousel({ onThemeChange }) {
             onClick={() => handleThemeClick(index)}
             title={theme.name}
           >
-            <div className="circle-gradient" style={{
-              background: `conic-gradient(
-                ${theme.colors[0]} 0deg 72deg,
-                ${theme.colors[1]} 72deg 144deg,
-                ${theme.colors[2]} 144deg 216deg,
-                ${theme.colors[3]} 216deg 288deg,
-                ${theme.colors[4]} 288deg 360deg
-              )`
-            }} />
+            {theme.icon ? (
+              <img
+                src={theme.icon}
+                alt={theme.name}
+                className="theme-icon"
+              />
+            ) : (
+              <div className="circle-gradient" style={{
+                background: `conic-gradient(
+                  ${theme.colors[0]} 0deg 72deg,
+                  ${theme.colors[1]} 72deg 144deg,
+                  ${theme.colors[2]} 144deg 216deg,
+                  ${theme.colors[3]} 216deg 288deg,
+                  ${theme.colors[4]} 288deg 360deg
+                )`
+              }} />
+            )}
           </div>
         ))}
       </div>
