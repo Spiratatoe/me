@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Spline from '@splinetool/react-spline';
 import './App.css';
 import Particles from './components/Particles';
+import BubbleCursor from './components/BubbleCursor';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -20,6 +21,9 @@ function AppContent() {
 
   return (
     <div className={`App ${!isHome ? 'scrollable' : ''}`}>
+      {/* Bubble Cursor - only for Kirby theme */}
+      {theme.name === 'Kirby' && <BubbleCursor />}
+
       {/* Particles background - only on home */}
       {isHome && (
         <div className="particles-background fade-in">

@@ -92,11 +92,33 @@
   font-size: 6rem;
   font-weight: bold;
   margin: 0;
-  line-height: 0.8;
+  line-height: 1.1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
+}
+
+.interaction-hint {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  animation: fadeInUp 1s ease-out 0.5s both;
+  z-index: 100;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .smileys {

@@ -46,13 +46,13 @@ function About() {
 
         {/* Skills Section */}
         <div className="about-card skills-card">
-          <h2 className="card-title">Skills</h2>
+          <h2 className="card-title">Skills & Tools</h2>
           <div className="card-content">
             {[
               { title: 'Game Development', skills: ['Unity', 'Unreal Engine', 'Spline'], colorIndex: 0 },
               { title: 'Frontend Development', skills: ['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React'], colorIndex: 1 },
-              { title: 'Backend & APIs', skills: ['Python', 'Flask', 'Java', 'Node.js', 'Nuclio', 'Func Apps', 'Postman'], colorIndex: 2 },
-              { title: 'AI / Machine Learning', skills: ['YOLO', 'Python', 'Claude Code'], colorIndex: 3 },
+              { title: 'Backend & APIs', skills: ['Python', 'Flask', 'Java', 'Node.js', 'Nuclio', 'Func Apps', 'Postman', 'Dagster'], colorIndex: 2 },
+              { title: 'AI / Machine Learning', skills: ['YOLO', 'Ollama', 'Claude Code'], colorIndex: 3 },
               { title: 'Databases', skills: ['SQL', 'PostgreSQL', 'Neo4j', 'Snowflake'], colorIndex: 4 },
               { title: 'Cloud & DevOps', skills: ['Azure', 'Azure DevOps', 'Docker'], colorIndex: 0 },
               { title: 'Collaboration & Project Management', skills: ['Jira', 'GitHub'], colorIndex: 1 },

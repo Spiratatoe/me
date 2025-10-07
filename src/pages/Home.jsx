@@ -25,6 +25,9 @@ function Home() {
           Spiratos
         </GradientText>
       </div>
+      <div className="interaction-hint">
+        Grab and move the smiley • Scroll to zoom
+      </div>
     </div>
   );
 }
