@@ -201,6 +201,35 @@
   transform: translateY(-50%) scale(1);
 }
 
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .left-content {
+    left: 5%;
+    top: 5%;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .interaction-hint {
+    display: none;
+  }
+
+  .right-nav {
+    top: 12%;
+    right: 5%;
+  }
+
+  .right-nav li {
+    margin: 1.5rem 0;
+  }
+
+  .right-nav a {
+    font-size: 1.5rem;
+  }
+}
+
 
 
 
