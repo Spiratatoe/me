@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Particles from './components/Particles';
 import BubbleCursor from './components/BubbleCursor';
@@ -77,6 +78,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <AppContent />
+        <Analytics />
       </Router>
     </ThemeProvider>
   );
