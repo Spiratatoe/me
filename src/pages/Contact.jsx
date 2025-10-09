@@ -13,7 +13,7 @@ function Connect() {
       <div className="connect-container">
         <div className="connect-content">
           <div className="image-frame">
-            <img src="/jack_beach.jpeg" alt="Jack at beach" />
+            <img src="/jack_at_beach.jpeg" alt="Jack at beach" />
           </div>
           <div className="connect-links">
             <a

@@ -1,12 +1,27 @@
 .projects-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  bottom: 5%;
+  z-index: 2;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 120px 2rem 8rem 2rem;
+  padding: 20px;
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* Hide scrollbar */
@@ -22,7 +37,6 @@
 .masonry-grid {
   column-count: 3;
   column-gap: 2rem;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -137,7 +151,7 @@
 
 @media (max-width: 640px) {
   .projects-container {
-    padding: 100px 1rem 1rem 1rem;
+    padding: 1rem;
   }
 
   .masonry-grid {
