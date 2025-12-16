@@ -5,7 +5,7 @@
 
 Finally made my personal portfolio! The theme I wanted to go with was a 3D asset in the middle taking focus, and since my 3D skills might not be the best, we ended up with a giant smiley face.
 
-A large bulk of this code was written using Claude Code, as I wanted to see how fast I could mix my own skills, my fast-turning ideas, and the convenience of AI. Let me say I was impressed—having fun and enjoying the whole process.
+A large bulk of this code was written using Claude Code, as I wanted to see how fast I could mix my own skills and the convenience of AI. Honestly it's impressive how fast you can go with it.
 
 Looking forward to the next iteration of this when Mr. Smiley gets older and I can try out some new front-end design!
 
