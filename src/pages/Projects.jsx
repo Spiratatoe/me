@@ -62,6 +62,27 @@ function Projects() {
       languages: ['C++', 'UART', 'Embedded Systems'],
       screenshot: '/rover.webp',
       link: 'https://github.com/Spiratatoe/Rover_Antenna_Interface'
+    },
+    {
+      title: 'Leather Book',
+      description: 'In the works',
+      languages: ['ionic', 'react'],
+      screenshot: '/leather.png',
+      link: 'https://github.com/Spiratatoe/leather-book'
+    },
+    {
+      title: 'RoomateFinancials App',
+      description: 'In the works',
+      languages: [ 'mongoDB', 'react', 'auth0'],
+      screenshot: '/finance.png',
+      link: 'https://github.com/Spiratatoe/RoomateFinancials-App'
+    },
+    {
+      title: 'Unreal Engine Pokemon Clone',
+      description: 'A tester project to get a feel for Unreal Engine by mixing two of my favorite games, Octopath Traveler and Pokemon.',
+      languages: [ 'Unreal Engine', 'C++'],
+      screenshot: '/pokemonhd.png',
+      // link: 'https://github.com/Spiratatoe/RoomateFinancials-App'
     }
   ];
 
