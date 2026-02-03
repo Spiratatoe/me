@@ -94,14 +94,17 @@ function About() {
                 style={{ '--box-color': theme.colors[1] }}
               >
                 <div className="skill-box-header">
-                  <span className="skill-icon">{ '{}'}</span>
+                  <span className="skill-icon">{'{}'}</span>
                   <h3>Backend</h3>
                 </div>
                 <div className="skill-list">
                   <span>Python</span>
                   <span>Node.js</span>
+                  <span>C++</span>
+                  <span>C#</span>
                   <span>Flask</span>
                   <span>Java</span>
+                  <span>JavaScript</span>
                   <span>REST APIs</span>
                 </div>
                 <p className="skill-vibe">The engine under the hood</p>
@@ -121,7 +124,10 @@ function About() {
                   <span>Snowflake</span>
                   <span>Neo4j</span>
                   <span>YOLO</span>
+                  <span>Pandas/Polars</span>
+                  <span>Dagster</span>
                   <span>TensorFlow</span>
+                  <span>SQL</span>
                 </div>
               </div>
 
@@ -136,9 +142,11 @@ function About() {
                 </div>
                 <div className="skill-list">
                   <span>Azure</span>
-                  <span>Docker</span>
-                  <span>CI/CD</span>
-                  <span>Git</span>
+                  <span>Docker/Portainer</span>
+                  <span>NGINX</span>
+                  <span>Vercel</span>
+                  <span>Auth0</span>
+                  <span>MacOS</span>
                 </div>
               </div>
 
@@ -171,6 +179,7 @@ function About() {
                   <span>VS Code</span>
                   <span>Jira</span>
                   <span>Postman</span>
+                  <span>GitHub</span>
                 </div>
               </div>
 
