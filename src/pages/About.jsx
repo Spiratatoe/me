@@ -65,39 +65,124 @@ function About() {
             </div>
           </div>
 
-          {/* Skills Section */}
+          {/* Skills Section - Bento Grid */}
           <div className="about-card skills-card">
-            <h2 className="card-title">Skills & Tools</h2>
-            <div className="card-content">
-              {[
-                { title: 'Game Development', skills: ['Unity', 'Unreal Engine', 'Spline'], colorIndex: 0 },
-                { title: 'Frontend Development', skills: ['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React'], colorIndex: 1 },
-                { title: 'Backend & APIs', skills: ['Python', 'Flask', 'Java', 'Node.js', 'Nuclio', 'Func Apps', 'Postman', 'Dagster'], colorIndex: 2 },
-                { title: 'AI / Machine Learning', skills: ['YOLO', 'Ollama', 'Claude Code'], colorIndex: 3 },
-                { title: 'Databases', skills: ['SQL', 'PostgreSQL', 'Neo4j', 'Snowflake'], colorIndex: 4 },
-                { title: 'Cloud & DevOps', skills: ['Azure', 'Azure DevOps', 'Docker'], colorIndex: 0 },
-                { title: 'Collaboration & Project Management', skills: ['Jira', 'GitHub'], colorIndex: 1 },
-                { title: 'Languages', skills: ['English', 'French'], colorIndex: 2, soft: true }
-              ].map((category, idx) => (
-                <div key={idx} className="skills-category">
-                  <h3>{category.title}</h3>
-                  <div className="skill-tags">
-                    {category.skills.map((skill, skillIdx) => (
-                      <span
-                        key={skillIdx}
-                        className={`skill-tag ${category.soft ? 'soft' : ''}`}
-                        style={{
-                          backgroundColor: category.soft ? 'white' : theme.colors[category.colorIndex],
-                          color: category.soft ? theme.colors[category.colorIndex] : 'white',
-                          borderColor: category.soft ? theme.colors[category.colorIndex] : 'transparent'
-                        }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+            <h2 className="card-title">What I Work With</h2>
+            <div className="skills-bento">
+              {/* Frontend - Large */}
+              <div
+                className="skill-box skill-box-large"
+                style={{ '--box-color': theme.colors[0] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">{'</>'}</span>
+                  <h3>Frontend</h3>
                 </div>
-              ))}
+                <div className="skill-list">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind</span>
+                  <span>Next.js</span>
+                  <span>HTML/CSS</span>
+                </div>
+                <p className="skill-vibe">Where pixels meet purpose</p>
+              </div>
+
+              {/* Backend - Large */}
+              <div
+                className="skill-box skill-box-large"
+                style={{ '--box-color': theme.colors[1] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">{ '{}'}</span>
+                  <h3>Backend</h3>
+                </div>
+                <div className="skill-list">
+                  <span>Python</span>
+                  <span>Node.js</span>
+                  <span>Flask</span>
+                  <span>Java</span>
+                  <span>REST APIs</span>
+                </div>
+                <p className="skill-vibe">The engine under the hood</p>
+              </div>
+
+              {/* Data & AI - Medium */}
+              <div
+                className="skill-box skill-box-medium"
+                style={{ '--box-color': theme.colors[2] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">*</span>
+                  <h3>Data & AI</h3>
+                </div>
+                <div className="skill-list">
+                  <span>PostgreSQL</span>
+                  <span>Snowflake</span>
+                  <span>Neo4j</span>
+                  <span>YOLO</span>
+                  <span>TensorFlow</span>
+                </div>
+              </div>
+
+              {/* Cloud & DevOps - Medium */}
+              <div
+                className="skill-box skill-box-medium"
+                style={{ '--box-color': theme.colors[3] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">~</span>
+                  <h3>Cloud & DevOps</h3>
+                </div>
+                <div className="skill-list">
+                  <span>Azure</span>
+                  <span>Docker</span>
+                  <span>CI/CD</span>
+                  <span>Git</span>
+                </div>
+              </div>
+
+              {/* Creative - Small */}
+              <div
+                className="skill-box skill-box-small"
+                style={{ '--box-color': theme.colors[4] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">^</span>
+                  <h3>Creative</h3>
+                </div>
+                <div className="skill-list">
+                  <span>Unity</span>
+                  <span>Unreal</span>
+                  <span>Spline</span>
+                </div>
+              </div>
+
+              {/* Tools - Small */}
+              <div
+                className="skill-box skill-box-small"
+                style={{ '--box-color': theme.colors[0] }}
+              >
+                <div className="skill-box-header">
+                  <span className="skill-icon">#</span>
+                  <h3>Tools</h3>
+                </div>
+                <div className="skill-list">
+                  <span>VS Code</span>
+                  <span>Jira</span>
+                  <span>Postman</span>
+                </div>
+              </div>
+
+              {/* Languages - Accent */}
+              <div
+                className="skill-box skill-box-accent"
+                style={{ '--box-color': theme.colors[1] }}
+              >
+                <span className="lang-badge">EN</span>
+                <span className="lang-badge">FR</span>
+                <p className="skill-vibe">Fluent in both + code</p>
+              </div>
             </div>
           </div>
 
