@@ -6,10 +6,11 @@ import { useState, useEffect, useRef } from 'react';
 
 const categories = [
   { id: 'all', label: 'All' },
-  { id: 'graphics', label: 'Graphics & Games' },
+  { id: 'graphics', label: 'Games' },
   { id: 'web', label: 'Web' },
   { id: 'ai', label: 'AI & Algorithms' },
   { id: 'systems', label: 'Systems' },
+  { id: 'competition', label: 'Competitions' },
 ];
 
 function Projects() {
@@ -38,9 +39,9 @@ function Projects() {
 
   const projects = [
     {
-      title: 'Underwater Bonanza',
-      description: 'A graphics program using OpenGL to enable walking through a procedurally created virtual world. Navigate through the depths of the ocean with fish, sharks, seaweeds, rocks, and caves.',
-      tags: ['C++', 'OpenGL', 'GLSL', 'Procedural'],
+      title: 'Pretty Blue',
+      description: 'Built a custom game engine featuring a procedural underwater world generated via Marching Cubes & custom noise algorithms. Implemented a high-performance rendering pipeline with real-time ray tracing and custom shaders.',
+      tags: ['C++', 'OpenGL', 'GLSL', 'Procedural', 'Game Engine'],
       category: 'graphics',
       screenshot: '/underwater_bonanza.jpg',
       link: 'https://github.com/Augusto-Concordia/underwater_bonanza'
@@ -54,8 +55,8 @@ function Projects() {
       link: 'https://github.com/Spiratatoe/PathingAlgo'
     },
     {
-      title: 'Bullet Bill Bullies',
-      description: 'A 2D Metroidvania-style platformer through four time periods. Pixel-art visuals combining exploration, combat, and puzzle-solving with time manipulation mechanics.',
+      title: 'Back in Time',
+      description: 'Designed a Metroidvania platformer with unique boss fights and complex time-travel mechanics. Managed state logic for enemy AI and collectibles in Unity.',
       tags: ['C#', 'Unity', 'Pixel Art', 'Game Dev'],
       category: 'graphics',
       screenshot: '/bullet-bill-bullies.png',
@@ -63,9 +64,9 @@ function Projects() {
     },
     {
       title: 'CQI 2025',
-      description: 'Quebec Engineering Competition project featuring strategic AI for attack vs. defense matches. Predictive algorithms for real-time decision optimization.',
+      description: 'Developed an autonomous point-scoring agent for a grid environment, implementing adaptive pathfinding algorithms and state evaluation under strict constraints.',
       tags: ['Python', 'Pandas', 'Algorithms', 'Competition'],
-      category: 'ai',
+      category: ['ai', 'competition'],
       screenshot: '/cqi.png',
       link: 'https://github.com/Spiratatoe/CQI_2025'
     },
@@ -79,32 +80,32 @@ function Projects() {
     },
     {
       title: 'ConUHacks IX',
-      description: 'Hackathon project combining rapid prototyping with functional design. API integrations and responsive layouts for dynamic web experience.',
-      tags: ['TypeScript', 'React', 'Node.js', 'Hackathon'],
-      category: 'web',
+      description: 'Developed a real-time AI Financial Assistant using RAG (Retrieval-Augmented Generation). Integrated live data with a custom chat UI using Next.js, MongoDB, and Ollama.',
+      tags: ['Next.js', 'MongoDB', 'RAG', 'AI', 'Hackathon'],
+      category: ['web', 'competition'],
       screenshot: '/hackathon.png',
       link: 'https://github.com/Spiratatoe/ConUHacks-IX'
     },
     {
       title: 'Cabot Trail CEC 2025',
-      description: 'Canadian Engineering Competition AI model for brain tumour detection from medical imaging. Machine learning with model optimization for accurate diagnosis.',
+      description: 'Brain Tumor Detection AI: Trained a custom Neural Network for medical imaging, designing a full preprocessing pipeline to optimize dataset quality and model accuracy.',
       tags: ['Python', 'TensorFlow', 'AI/ML', 'Medical'],
-      category: 'ai',
+      category: ['ai', 'competition'],
       screenshot: '/brains.jpg',
       link: 'https://github.com/Spiratatoe/Cabot_Trail_CEC_2025'
     },
     {
       title: 'Rover Antenna Interface',
-      description: 'Space Concordia capstone: communication system between rover and base station. UART protocols and RAI PIF standards for robust data transmission.',
-      tags: ['C++', 'UART', 'Embedded', 'Space'],
-      category: 'systems',
+      description: 'Communication system between rover and base station built with UART protocols and RAI PIF standards. Includes a web-based front-end for GPS and map visuals (Leaflet).',
+      tags: ['C++', 'UART', 'Embedded', 'JavaScript', 'Space Concordia'],
+      category: ['systems', 'competition'],
       screenshot: '/rover.webp',
       link: 'https://github.com/Spiratatoe/Rover_Antenna_Interface'
     },
     {
       title: 'Leather Book',
-      description: 'Mobile app project currently in development.',
-      tags: ['Ionic', 'React', 'Mobile'],
+      description: 'A personal food tracker & fitness notebook built from scratch with Claude Code, Ionic React, and Capacitor to replace ad-filled alternatives.',
+      tags: ['Ionic', 'React', 'Mobile', 'Capacitor'],
       category: 'web',
       status: 'wip',
       screenshot: '/leather.png',
@@ -121,16 +122,42 @@ function Projects() {
     },
     {
       title: 'Unreal Pokemon Clone',
-      description: 'Learning project combining Octopath Traveler aesthetics with Pokemon mechanics in Unreal Engine.',
-      tags: ['Unreal Engine', 'C++', 'Game Dev'],
+      description: 'A learning project combining Octopath Traveler aesthetics with Pokemon mechanics in Unreal Engine 5.',
+      tags: ['Unreal Engine 5', 'C++', 'Game Dev'],
       category: 'graphics',
       screenshot: '/pokemonhd.png',
+    }, {
+      title: 'Personal Portfolio',
+      description: 'A showcase of my work blending AI-driven development with 3D web objects. Experimentation with Spline, Vercel, and modern web tools.',
+      tags: ['React', 'Three.js', 'Spline', 'Vercel', 'AI'],
+      category: 'web',
+      screenshot: '/portfolio.png', // Placeholder
+      link: 'https://github.com/Spiratatoe/me'
+    },
+    {
+      title: 'Robot Wars',
+      description: 'Programmed control logic and sensor integration (C/C++, Arduino) for a competitive sumo robot. Iterative design over multiple years.',
+      tags: ['C++', 'Arduino', 'Robotics', 'Embedded'],
+      category: ['systems', 'competition'],
+      screenshot: '/robotwars.png', // Placeholder
+      link: 'https://github.com/Spiratatoe/RoboWars2024' // Inferred from "Github" header in resume
+    },
+    {
+      title: 'Jeux de Génie',
+      description: 'Representative for Concordia in software and consulting challenges. Developed rapid prototypes and technical solutions under strict time pressure.',
+      tags: ['Consulting', 'Competition'],
+      category: 'competition',
+      screenshot: '/jdg.png', // Placeholder
     }
   ];
 
   const filteredProjects = activeCategory === 'all'
     ? projects
-    : projects.filter(p => p.category === activeCategory);
+    : projects.filter(p =>
+      Array.isArray(p.category)
+        ? p.category.includes(activeCategory)
+        : p.category === activeCategory
+    );
 
   return (
     <>
