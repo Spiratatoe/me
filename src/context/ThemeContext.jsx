@@ -13,7 +13,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState({
     name: 'Default',
-    colors: ['#0736ff', '#000000', '#43484B', '#E5E4B7', '#84b0c1'],
+    colors: ['#0736ff', '#000000', '#43484B', '#F4E4BA', '#84b0c1'], // Refined Beige
     splineScene: 'https://prod.spline.design/lwJZVVCK6o807FRr/scene.splinecode'
   });
 
