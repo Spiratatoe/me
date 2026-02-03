@@ -10,11 +10,19 @@ import Projects from './pages/Projects';
 import Connect from './pages/Contact';
 import ThemeCarousel from './components/ThemeCarousel';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { useState, useEffect } from 'react';
 
 function AppContent() {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const { theme, setTheme } = useTheme();
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    setIsTransitioning(true);
+    const timer = setTimeout(() => setIsTransitioning(false), 600);
+    return () => clearTimeout(timer);
+  }, [theme]);
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
@@ -22,6 +30,10 @@ function AppContent() {
 
   return (
     <div className={`App ${!isHome ? 'scrollable' : ''}`}>
+      {/* Theme Transition Overlay */}
+      <div className={`theme-transition-overlay ${isTransitioning ? 'active' : ''}`}
+        style={{ backgroundColor: theme.colors[0] }} />
+
       {/* Bubble Cursor - only for Kirby theme */}
       {theme.name === 'Kirby' && <BubbleCursor />}
 

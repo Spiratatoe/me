@@ -1,24 +1,11 @@
 .about-page {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 90%;
   max-width: 1200px;
-  bottom: 5%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 40px;
   z-index: 2;
-  overflow-y: auto;
   animation: slideIn 0.6s ease-out;
-}
-
-/* Hide scrollbar */
-.about-page::-webkit-scrollbar {
-  display: none;
-}
-
-.about-page {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .about-grid {
@@ -35,21 +22,17 @@
   padding: 25px 35px;
   border: 3px solid #000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: cardSlideIn 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
   min-height: auto;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-@keyframes cardSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.about-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
+
 
 .about-card:hover {
   transform: translateY(-5px);
