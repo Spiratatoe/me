@@ -22,6 +22,7 @@ function AppContent() {
 
   return (
     <div className={`App ${!isHome ? 'scrollable' : ''}`}>
+
       {/* Bubble Cursor - only for Kirby theme */}
       {theme.name === 'Kirby' && <BubbleCursor />}
 

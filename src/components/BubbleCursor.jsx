@@ -54,7 +54,7 @@ function BubbleCursor({ wrapperElement }) {
     let context = null;
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let isInitialized = false;
+
 
     const onWindowResize = () => {
       width = window.innerWidth;
@@ -170,7 +170,6 @@ function BubbleCursor({ wrapperElement }) {
         canvas.height = height;
       }
 
-      isInitialized = true;
       bindEvents();
       loop();
     };

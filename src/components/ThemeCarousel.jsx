@@ -5,22 +5,22 @@ import './ThemeCarousel.css';
 const themes = [
   {
     name: 'Default',
-    colors: ['#0736ff', '#000000', '#43484B', '#E5E4B7', '#84b0c1'],
+    colors: ['#0736ff', '#000000', '#43484B', '#F4E4BA', '#84b0c1'], // Refined Beige
     splineScene: 'https://prod.spline.design/lwJZVVCK6o807FRr/scene.splinecode'
   },
   {
     name: 'Sunset',
-    colors: ['#ff6b35', '#f7931e', '#fdc500', '#c1121f', '#780000'],
+    colors: ['#F46036', '#2E294E', '#8D0801', '#D72638', '#F49D37'], // Changed index 2 to Dark Red
     splineScene: 'https://prod.spline.design/PbvdFoCheyXlkUSY/scene.splinecode'
   },
   {
     name: 'Ocean',
-    colors: ['#06d6a0', '#003527', '#ff5804', '#cef17b', '#eceabe'],
+    colors: ['#00916E', '#0D1B2A', '#1B4332', '#FE5F55', '#4CC9F0'], // Changed index 2 to Dark Green
     splineScene: 'https://prod.spline.design/d0RGQyc-gWntt7li/scene.splinecode'
   },
   {
     name: 'Purple',
-    colors: ['#7209b7', '#560bad', '#3a0ca3', '#f72585', '#4cc9f0'],
+    colors: ['#560BAD', '#240046', '#3F37C9', '#B5179E', '#4361EE'], // Changed index 2 to Indigo
     splineScene: 'https://prod.spline.design/el1qrgRs9m15U78x/scene.splinecode'
   },
   {
