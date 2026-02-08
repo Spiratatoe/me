@@ -50,7 +50,7 @@ function Projects() {
       title: 'PathingAlgo',
       description: 'A pathfinding algorithm visualizer that solves hex-grid mazes using heuristic search. Visualize algorithmic behavior in real time on non-square grids.',
       tags: ['Python', 'NumPy', 'Matplotlib', 'Algorithms'],
-      category: 'ai',
+      category: ['ai', 'competition'],
       screenshot: '/pathingAlgo.png',
       link: 'https://github.com/Spiratatoe/PathingAlgo'
     },
@@ -108,7 +108,7 @@ function Projects() {
       tags: ['Ionic', 'React', 'Mobile', 'Capacitor'],
       category: 'web',
       status: 'wip',
-      screenshot: '/leather.png',
+      screenshot: '/gymbook.png',
       link: 'https://github.com/Spiratatoe/leather-book'
     },
     {
@@ -125,7 +125,15 @@ function Projects() {
       description: 'A learning project combining Octopath Traveler aesthetics with Pokemon mechanics in Unreal Engine 5.',
       tags: ['Unreal Engine 5', 'C++', 'Game Dev'],
       category: 'graphics',
+      status: 'wip',
       screenshot: '/pokemonhd.png',
+    },    {
+      title: 'Rhumbix API',
+      description: 'Quick little tool for dealing with the Rhumbix api, without postgres and the ability to get the csv and json of the responses.',
+      tags: ['Rhumbix', 'Python', 'API', 'Construction'],
+      category: 'ai',
+      screenshot: '/rhumbix.png',
+      link:'https://github.com/Spiratatoe/rhumbix-api'
     }, {
       title: 'Personal Portfolio',
       description: 'A showcase of my work blending AI-driven development with 3D web objects. Experimentation with Spline, Vercel, and modern web tools.',
@@ -148,6 +156,14 @@ function Projects() {
       tags: ['Consulting', 'Competition'],
       category: 'competition',
       screenshot: '/jdg.png', // Placeholder
+    },
+    {
+      title: 'Tetris',
+      description: 'The project that made me fall for coding. As a submission for my final coding project in cegep, for a class I had almost given up on, I had decide to try building one of my favourite games so that class would at least be fun. A few years later, and I\'ve now graduated as a software engineer, and work as a developer. ',
+      tags: ['Pygames', 'Python', 'Game Dev'],
+      category: 'graphics',
+      screenshot: '/tetrisPoster.jpg',
+      link:'https://github.com/Spiratatoe/tetris'
     }
   ];
 
